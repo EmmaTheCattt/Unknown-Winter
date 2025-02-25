@@ -31,6 +31,11 @@ public class SpriteDirection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        LookAtPlayer();
+    }
+
+    private void LookAtPlayer()
+    {
         Fixed_Target = new Vector3(Target.position.x, Starting_point.position.y, Target.position.z);
         transform.LookAt(Fixed_Target);
     }
