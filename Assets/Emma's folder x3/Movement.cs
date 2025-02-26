@@ -1,47 +1,93 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Movement : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 1f;
+    [Header("Movement")]
+    public float movespeed = 1f;
+    public bool leg_broken = true;
+    public float Leg_push = 0f;
 
-    public Rigidbody RB;
-    public Camera Camera;
-    public Animator Animator;
+    public float GroundDrag;
+
+    public float move_wait_time = 1f;
+
+    [Header("Ground Check")]
+    public float height;
+    public LayerMask Ground;
+    public bool grounded;
+
+    public Rigidbody rb;
+
+    public Transform Orientation;
+
+    public float horizontalInput;
+    public float verticalInput;
+
+    Vector3 moveDirection;
 
     void Start()
     {
-        RB = GetComponent<Rigidbody>();
-        Camera = GetComponentInChildren<Camera>();
-        Animator = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+
+        Orientation = GameObject.FindGameObjectWithTag("Orientation").transform;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
+        grounded = Physics.Raycast(transform.position, Vector3.down, height * 0.5f, Ground);
 
-        }
-        if (Input.GetKey(KeyCode.S))
+        if (grounded)
         {
-
+            rb.drag = GroundDrag;
         }
-        if (Input.GetKey(KeyCode.D))
+        else
         {
-
+            rb.drag = 0;
         }
-        if (Input.GetKey(KeyCode.A))
-        {
 
-        }
+        MyInput();
+        
     }
 
     private void FixedUpdate()
     {
-        
+        MovePlayer();
+    }
+
+    void MyInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+    }
+
+    void MovePlayer()
+    {
+        moveDirection = Orientation.forward * verticalInput + Orientation.right * horizontalInput;
+        Brokenleg(leg_broken);
+
+        rb.AddForce(moveDirection.normalized * movespeed, ForceMode.Force);
+    }
+
+    void Brokenleg(bool Broken)
+    {
+        if (Broken == true)
+        {
+            Invoke("BrokenMove", move_wait_time);
+        }
+    }
+
+    void BrokenMove()
+    {
+        rb.AddForce(moveDirection.normalized * Leg_push, ForceMode.Force);
+        CancelInvoke("BrokenMove");
     }
 }

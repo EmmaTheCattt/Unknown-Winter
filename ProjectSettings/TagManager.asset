@@ -6,11 +6,12 @@ TagManager:
   tags:
   - PlayerCam
   - Cam_animation
+  - Orientation
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 

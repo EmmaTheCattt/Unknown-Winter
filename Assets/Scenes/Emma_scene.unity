@@ -400,6 +400,7 @@ MonoBehaviour:
   sensY: 400
   aniX: 0
   aniY: 0
+  aniZ: 0
   Orientation: {fileID: 1373201316}
   Animator: {fileID: 0}
   xRotation: 0
@@ -626,10 +627,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cca44537ecbbac4e93d574818100131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  RB: {fileID: 0}
-  Camera: {fileID: 0}
-  Animator: {fileID: 0}
+  movespeed: 12.75
+  leg_broken: 1
+  Leg_push: 200
+  GroundDrag: 5
+  move_wait_time: 1.4
+  height: 3
+  Ground:
+    serializedVersion: 2
+    m_Bits: 8
+  grounded: 0
+  rb: {fileID: 0}
+  Orientation: {fileID: 0}
+  horizontalInput: 0
+  verticalInput: 0
 --- !u!1 &928608146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1055,7 @@ GameObject:
   - component: {fileID: 1373201316}
   m_Layer: 0
   m_Name: Orientation
-  m_TagString: Untagged
+  m_TagString: Orientation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1144,7 +1155,7 @@ GameObject:
   - component: {fileID: 1775841841}
   - component: {fileID: 1775841840}
   - component: {fileID: 1775841839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform_testing
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -26,6 +26,7 @@ public class Camera_controller : MonoBehaviour
         Cursor.visible = false;
 
         Animator = GameObject.FindGameObjectWithTag("Cam_animation");
+        Orientation = GameObject.FindGameObjectWithTag("Orientation").transform;
         aniX = Animator.transform.rotation.eulerAngles.x;
         aniY = Animator.transform.rotation.eulerAngles.y;
         aniZ = Animator.transform.rotation.eulerAngles.z;
