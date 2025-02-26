@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkSpeed: 12
-  SprintSpeed: 14
+  SprintSpeed: 12
   walking: 0
   Running: 0
   GroundDrag: 5
@@ -689,7 +689,7 @@ MonoBehaviour:
   weak_leg_push_time: 0.3
   Strong_leg_push_time: 0.3
   move_wait_time_slow: 1.5
-  move_wait_time_quick: 0.5
+  move_wait_time_quick: 0.75
   height: 3
   Ground:
     serializedVersion: 2
@@ -825,7 +825,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933745420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bcd7971a983a9c84296323a1973c4209, type: 2}
   m_CullingMode: 0
