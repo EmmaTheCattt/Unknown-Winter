@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public float movespeed = 1f;
     public bool leg_broken = true;
     public float Leg_push = 0f;
+    public float Leg_push_time = 0.1f;
 
     public float GroundDrag;
 
@@ -88,6 +89,7 @@ public class Movement : MonoBehaviour
     void BrokenMove()
     {
         rb.AddForce(moveDirection.normalized * Leg_push, ForceMode.Force);
-        CancelInvoke("BrokenMove");
+        //CancelInvoke("BrokenMove");
+        Invoke("CancelInvoke", Leg_push_time);
     }
 }
