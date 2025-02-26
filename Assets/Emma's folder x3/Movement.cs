@@ -72,7 +72,7 @@ public class Movement : MonoBehaviour
     private void Animation_check()
     {
         Vel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        if (Vel != Vector3.zero)
+        if (Vel.sqrMagnitude >= 0.4)
         {
             walking = true;
             Debug.Log(rb.velocity);
