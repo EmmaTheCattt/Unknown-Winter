@@ -36,6 +36,7 @@ public class Movement : MonoBehaviour
     public float verticalInput;
 
     Vector3 moveDirection;
+    Vector3 Vel;
 
     void Start()
     {
@@ -60,12 +61,27 @@ public class Movement : MonoBehaviour
         {
             rb.drag = 0;
         }
-        
-        MyInput();
 
+        MyInput();
+        Animation_check();
 
         Animator.SetBool("Walk", walking);
 
+    }
+
+    private void Animation_check()
+    {
+        Vel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        if (Vel != Vector3.zero)
+        {
+            walking = true;
+            Debug.Log(rb.velocity);
+        }
+        else
+        {
+            walking = false;
+            Debug.Log(rb.velocity);
+        }
     }
 
     private void FixedUpdate()
@@ -77,15 +93,6 @@ public class Movement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift) == false)
-        {
-            walking = true;
-        }
-        else
-        {
-            walking = false;
-        }
     }
 
     void MovePlayer()
