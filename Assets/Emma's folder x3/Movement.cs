@@ -8,16 +8,27 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
 
     [Header("Movement")]
-    public float movespeed = 1f;
+    private float movespeed = 1f;
+    public float WalkSpeed = 1f;
+    public float SprintSpeed = 2f;
     public bool walking = false;
+    public bool Running = false;
     public float GroundDrag;
 
     [Header("Broken leg")]
     //broken leg.
     public bool leg_broken = true;
-    public float Leg_push = 0f;
-    public float Leg_push_time = 0.1f;
-    public float move_wait_time = 1f;
+    private float Leg_push = 0f;
+    public float weak_leg_push = 11.5f;
+    public float Strong_leg_push = 15.5f;
+
+    private float Leg_push_time = 0.1f;
+    public float weak_leg_push_time = 0.3f;
+    public float Strong_leg_push_time = 0.3f;
+
+    private float move_wait_time = 1f;
+    public float move_wait_time_slow = 1.5f;
+    public float move_wait_time_quick = 1.5f;
 
     [Header("Ground Check")]
     public float height;
@@ -40,6 +51,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -63,16 +75,22 @@ public class Movement : MonoBehaviour
         }
 
         MyInput();
-        Animation_check();
-
-        Animator.SetBool("Walk", walking);
-
+        animationReset();
     }
 
+    private void animationReset()
+    {
+        if (Vel.sqrMagnitude == 0)
+        {
+            walking = false;
+            Animator.SetBool("Walk", walking);
+        }
+    }
     private void Animation_check()
     {
+
         Vel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-        if (Vel.sqrMagnitude >= 0.4)
+        if (Vel.sqrMagnitude >= 0.4 && grounded == true)
         {
             walking = true;
             Debug.Log(rb.velocity);
@@ -82,6 +100,17 @@ public class Movement : MonoBehaviour
             walking = false;
             Debug.Log(rb.velocity);
         }
+
+        if (Vel.sqrMagnitude >= 0.1 && Input.GetKey(KeyCode.LeftShift) && grounded == true)
+        {
+            Animator.speed = 2;
+        }
+        else
+        {
+            Animator.speed = 1;
+        }
+
+        Animator.SetBool("Walk", walking);
     }
 
     private void FixedUpdate()
@@ -93,6 +122,21 @@ public class Movement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKey(KeyCode.LeftShift) && grounded == true)
+        {
+            movespeed = SprintSpeed;
+            Leg_push = Strong_leg_push;
+            Leg_push_time = Strong_leg_push_time;
+            move_wait_time = move_wait_time_quick;
+        }
+        else
+        {
+            movespeed = WalkSpeed;
+            Leg_push = weak_leg_push;
+            Leg_push_time = weak_leg_push_time;
+            move_wait_time = move_wait_time_slow;
+        }
     }
 
     void MovePlayer()
@@ -114,7 +158,8 @@ public class Movement : MonoBehaviour
     void BrokenMove()
     {
         rb.AddForce(moveDirection.normalized * Leg_push, ForceMode.Force);
-        //CancelInvoke("BrokenMove");
+        Animation_check();
         Invoke("CancelInvoke", Leg_push_time);
+
     }
 }
