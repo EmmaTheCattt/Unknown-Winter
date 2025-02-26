@@ -401,6 +401,9 @@ MonoBehaviour:
   aniX: 0
   aniY: 0
   aniZ: 0
+  aniX_pos: 0
+  aniY_pos: 0
+  aniZ_pos: 0
   Orientation: {fileID: 1373201316}
   Animator: {fileID: 0}
   xRotation: 0
@@ -628,11 +631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 12.75
+  walking: 0
+  GroundDrag: 5
   leg_broken: 1
   Leg_push: 11.5
   Leg_push_time: 0.3
-  GroundDrag: 5
-  move_wait_time: 1.4
+  move_wait_time: 1.5
   height: 3
   Ground:
     serializedVersion: 2
@@ -640,6 +644,8 @@ MonoBehaviour:
   grounded: 0
   rb: {fileID: 0}
   Orientation: {fileID: 0}
+  Cam_animation: {fileID: 0}
+  Animator: {fileID: 0}
   horizontalInput: 0
   verticalInput: 0
 --- !u!1 &928608146

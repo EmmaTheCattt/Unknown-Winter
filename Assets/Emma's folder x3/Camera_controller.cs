@@ -12,6 +12,11 @@ public class Camera_controller : MonoBehaviour
     public float aniY;
     public float aniZ;
 
+    public float aniX_pos;
+    public float aniY_pos;
+    public float aniZ_pos;
+
+
     public Transform Orientation;
     public GameObject Animator;
 
@@ -27,9 +32,15 @@ public class Camera_controller : MonoBehaviour
 
         Animator = GameObject.FindGameObjectWithTag("Cam_animation");
         Orientation = GameObject.FindGameObjectWithTag("Orientation").transform;
+        
+        //animations
         aniX = Animator.transform.rotation.eulerAngles.x;
         aniY = Animator.transform.rotation.eulerAngles.y;
         aniZ = Animator.transform.rotation.eulerAngles.z;
+
+        aniX_pos = Animator.transform.position.x;
+        aniY_pos = Animator.transform.position.y;
+        aniZ_pos = Animator.transform.position.z;
 
     }
 
@@ -50,5 +61,7 @@ public class Camera_controller : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(xRotation + aniX, yRotation + aniY, aniZ);
         Orientation.rotation = Quaternion.Euler(0, yRotation + aniY, aniY);
+
+        transform.position = new Vector3(aniX_pos, aniY_pos, aniZ_pos);
     }
 }
