@@ -637,11 +637,11 @@ MonoBehaviour:
   GroundDrag: 5
   leg_broken: 1
   weak_leg_push: 11.5
-  Strong_leg_push: 14
+  Strong_leg_push: 11.5
   weak_leg_push_time: 0.3
   Strong_leg_push_time: 0.3
-  move_wait_time_slow: 1.5
-  move_wait_time_quick: 0.75
+  move_wait_time_slow: 1.3
+  move_wait_time_quick: 0.5
   height: 3
   Ground:
     serializedVersion: 2
