@@ -8,6 +8,7 @@ TagManager:
   - Cam_animation
   - Orientation
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
