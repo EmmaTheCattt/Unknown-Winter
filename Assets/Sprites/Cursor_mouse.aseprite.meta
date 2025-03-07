@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 11fe77b69993de742bb577a8883768ec
+guid: 67acd2b602804624f81f77980f434db1
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638761173595538486
+  platformSettingsDirtyTick: 638761198535368194
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,18 +122,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: MONSTER v5
+  - name: Cursor_mouse
     originalName: 
-    pivot: {x: 0.42857146, y: -0.4827586}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 28
-      height: 29
-    spriteID: 9eed9d2ba19b4844fbd0163909f43958
+      width: 26
+      height: 26
+    spriteID: 9e33c064c5192414fbea9ce54e729eb8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -145,21 +145,21 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2146165923
-    name: MONSTER v5
+    guid: 1236407284
+    name: Cursor_mouse
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: MONSTER v5
+    - name: Cursor_mouse
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 20
-        y: 78
-        width: 28
-        height: 29
-      spriteId: 9eed9d2ba19b4844fbd0163909f43958
+        x: 3
+        y: 3
+        width: 26
+        height: 26
+      spriteId: 9e33c064c5192414fbea9ce54e729eb8
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -202,5 +202,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 128}
+  canvasSize: {x: 32, y: 32}
   previousTextureSize: {x: 64, y: 64}
