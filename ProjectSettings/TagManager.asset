@@ -8,6 +8,8 @@ TagManager:
   - Cam_animation
   - Orientation
   - Bullet
+  - Interact
+  - Interactable
   layers:
   - Default
   - TransparentFX

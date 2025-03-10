@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flareGunSprite: {fileID: -2413806693520163455, guid: 32e7f4b22be9a2447ab9c07090d444e5, type: 3}
   healthKitSprite: {fileID: -2413806693520163455, guid: 7c97f0ae21b517b48be7de537e227bae, type: 3}
-  flareAmmoSprite: {fileID: 0}
+  flareAmmoSprite: {fileID: -2413806693520163455, guid: 7c97f0ae21b517b48be7de537e227bae, type: 3}
 --- !u!4 &161750883
 Transform:
   m_ObjectHideFlags: 0
