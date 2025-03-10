@@ -10,8 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public float StartingHealth = 100f;
     public Slider slider;
     public Image FillImage;
-    public Color FullHealthColor = Color.green;
-    public Color ZeroHealthColor = Color.red;
+    public Color FullHealthColor = Color.red;
+    public Color ZeroHealthColor = Color.black;
     private float CurrentHealth;
     private bool Dead;
 
