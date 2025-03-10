@@ -1,71 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour
+public class Inventory
 {
-    public static Inventory Singleton;
-    public static InventoryItem carriedItem;
+    private List<Item> itemlist;
 
-    [SerializeField] InventorySlot[] inventorySlots;
-
-    [SerializeField] Transform dragablesTransform;
-    [SerializeField] InventoryItem itemPrefab;
-
-    [SerializeField] Item[] items;
-    [SerializeField] Button giveItemBtn;
-
-    private void Awake()
+    public Inventory()
     {
-        Singleton = this;
-        giveItemBtn.onClick.AddListener( delegate { SpawnInventoryItem(); });
+        itemlist = new List<Item>();
+        AddItem(new Item { itemtype = Item.ItemType.FlareGun, amount = 1 });
+        AddItem(new Item { itemtype = Item.ItemType.FlareAmmo, amount = 4 });
+        AddItem(new Item { itemtype = Item.ItemType.HealthKit, amount = 2 });
+        Debug.Log(itemlist.Count);
     }
 
-    public void SpawnInventoryItem(Item item = null)
+    public void AddItem(Item item)
     {
-        Item _item = item;
-        if (_item == null)
-        {
-            int random = Random.Range(0, items.Length);
-            _item = items[random];
-        }
-
-        for (int i = 0; i < inventorySlots.Length; i++) 
-        {
-            if(inventorySlots[i] == null)
-            {
-                Instantiate(itemPrefab, inventorySlots[i].transform);
-                break;
-            }
-        }
+        itemlist.Add(item);
     }
 
-    private void Update()
+    public List<Item> GetItems()
     {
-        if(carriedItem == null)
-        {
-            carriedItem.transform.position = Input.mousePosition;
-        }
+        return itemlist;
     }
-
-    public void SetCarriedItem(InventoryItem item)
-    {
-        if (carriedItem != null)
-        {
-            if (item.activeSlot.myTag != SlotTag.None && item.activeSlot.myTag != carriedItem.myItem.itemTag) return;
-            item.activeSlot.SetItem(carriedItem);
-        }
-
-        
-
-        carriedItem = item;
-        carriedItem.canvasGroup.blocksRaycasts = false;
-        item.transform.SetParent(dragablesTransform);
-        
-    }
-
-    
-
-
 }

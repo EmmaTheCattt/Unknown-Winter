@@ -2,11 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SlotTag { None, Head, Chest, Legs, Feet}
-
-[CreateAssetMenu(menuName = "Scriptable Objects/Items")]
-public class Item : ScriptableObject
+public class Item
 {
-    public Sprite sprite;
-    public SlotTag itemTag;
+    public enum ItemType
+    {
+        FlareGun, HealthKit, FlareAmmo
+    }
+
+    public ItemType itemtype;
+    public int amount;
+
+
+    public Sprite GetSprite()
+    {
+        switch (itemtype)
+        {
+            default:
+                case ItemType.FlareGun: return ItemAssets.Instance.flareGunSprite;
+                case ItemType.HealthKit: return ItemAssets.Instance.healthKitSprite;
+                case ItemType.FlareAmmo: return ItemAssets.Instance.flareAmmoSprite;
+        }
+    }
 }
