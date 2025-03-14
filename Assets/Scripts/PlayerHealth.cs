@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public float StartingHealth = 100f;
     public Slider slider;
     public Image FillImage;
+    
+    
     public Color FullHealthColor = Color.red;
     public Color ZeroHealthColor = Color.black;
     private float CurrentHealth;
@@ -17,14 +19,17 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnEnable()
     {
+        
         CurrentHealth = StartingHealth;
         Dead = false;
         SetHealthUI();
+        
     }
     public void TakeDamage(float damage) 
     {
     CurrentHealth -= damage;
         SetHealthUI();
+       
         if (CurrentHealth <= 0 && !Dead)
         { 
         OnDeath();

@@ -719,6 +719,7 @@ MonoBehaviour:
   StartingHealth: 100
   slider: {fileID: 501346736}
   FillImage: {fileID: 1787022475}
+  Handle: {fileID: 1731207093}
   FullHealthColor: {r: 0.7735849, g: 0, b: 0, a: 1}
   ZeroHealthColor: {r: 0.21509439, g: 0.04017799, b: 0.04017799, a: 1}
 --- !u!1 &928608146
@@ -1386,6 +1387,7 @@ GameObject:
   - component: {fileID: 1731207093}
   - component: {fileID: 1731207095}
   - component: {fileID: 1731207094}
+  - component: {fileID: 1731207096}
   m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
@@ -1424,15 +1426,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8962264, g: 0.03124996, b: 0, a: 1}
+  m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.9716981, g: 0.022917405, b: 0.022917405, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4714493575565097357, guid: 4b364e4c9cf91ac4db4c3e19e5a701ca, type: 3}
+  m_Sprite: {fileID: 1666022006368239805, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1450,6 +1452,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731207092}
   m_CullTransparentMesh: 1
+--- !u!114 &1731207096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731207092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbdb7136728fec4d8cbd224992a0f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1666022006368239805, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: -1760067955314855705, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: -3098689549276752192, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: -1676986941358449085, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: -1255398075091535632, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: -3059491895994355295, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: -6373477066921621264, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: 2360731871602114320, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: 7972523776694587428, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  - {fileID: -3592619611234115361, guid: b6b976edb02fd204cb852ad2db76ce2a, type: 3}
+  spritePerFrame: 10
+  loop: 1
+  destroyOnEnd: 0
 --- !u!1 &1775841838
 GameObject:
   m_ObjectHideFlags: 0
