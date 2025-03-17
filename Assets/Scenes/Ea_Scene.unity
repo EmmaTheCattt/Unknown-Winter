@@ -358,7 +358,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -5778420220940806205, guid: c0ea46cf20be15949b0e2706b359e5a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -719,7 +719,6 @@ MonoBehaviour:
   StartingHealth: 100
   slider: {fileID: 501346736}
   FillImage: {fileID: 1787022475}
-  Handle: {fileID: 1731207093}
   FullHealthColor: {r: 0.7735849, g: 0, b: 0, a: 1}
   ZeroHealthColor: {r: 0.21509439, g: 0.04017799, b: 0.04017799, a: 1}
 --- !u!1 &928608146
