@@ -8,8 +8,12 @@ TagManager:
   - Cam_animation
   - Orientation
   - Bullet
+<<<<<<< HEAD
   - Interact
   - Interactable
+=======
+  - Enemy
+>>>>>>> Healthtest
   layers:
   - Default
   - TransparentFX
