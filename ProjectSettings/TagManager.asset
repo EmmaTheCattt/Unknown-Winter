@@ -3,26 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - PlayerCam
-  - Cam_animation
-  - Orientation
-  - Bullet
-<<<<<<< HEAD
-  - Interact
-  - Interactable
-=======
-  - Enemy
->>>>>>> Healthtest
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Bullet
-  - Monster
+  - 
+  - 
   - 
   - 
   - 

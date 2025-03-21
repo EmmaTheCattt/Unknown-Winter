@@ -307,6 +307,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1646524853646471078, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 2036104864059358624, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -318,6 +322,10 @@ PrefabInstance:
     - target: {fileID: 2036104864059358624, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2990992948848598594, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: spritePerFrame
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4535546109409562557, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: m_AnchorMax.x
