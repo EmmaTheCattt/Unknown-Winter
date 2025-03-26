@@ -7,7 +7,7 @@ public class Interaction : MoveCamera
 {
     private void OnTriggerEnter(Collider target)
     {
-        if (target.tag == "Interactable")
+        if (target.CompareTag("Interactable"))
         {
             Debug.Log("In View");
         }

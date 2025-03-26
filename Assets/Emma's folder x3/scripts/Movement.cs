@@ -93,12 +93,12 @@ public class Movement : MonoBehaviour
         if (Vel.sqrMagnitude >= 0.4 && grounded == true)
         {
             walking = true;
-            Debug.Log(rb.velocity);
+            //Debug.Log(rb.velocity);
         }
         else
         {
             walking = false;
-            Debug.Log(rb.velocity);
+            //Debug.Log(rb.velocity);
         }
 
         if (Vel.sqrMagnitude >= 0.1 && Input.GetKey(KeyCode.LeftShift) && grounded == true)
