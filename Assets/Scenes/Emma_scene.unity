@@ -397,6 +397,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5234054393738952094, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5482032286818345714, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
