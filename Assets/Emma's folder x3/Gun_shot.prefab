@@ -19432,7 +19432,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -19520,7 +19520,7 @@ Light:
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_Flare: {fileID: 0}
+  m_Flare: {fileID: 12100000, guid: 310daa29501d4544e899bb3ecf2f496a, type: 2}
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
@@ -19551,7 +19551,7 @@ LensFlare:
   m_FadeSpeed: 3
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_Directional: 0
 --- !u!95 &6495776599910618267
 Animator:
