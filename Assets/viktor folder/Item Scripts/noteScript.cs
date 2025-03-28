@@ -2,26 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 
-public class NoteScript : MonoBehaviour
+public class NoteScript : InteractionScript
 {
     public Image noteGraphics;
-
+    private bool click;
 
     void Start()
     {
         noteGraphics.enabled = false;
     }
 
-    private void OnTriggerEnter(Collider target)
+    private void Update()
     {
         bool click = Input.GetMouseButtonDown(1);
-
-        if (target.CompareTag("Interact") && click)
+        if (click)
         {
             Debug.Log("Clicked");
-            noteGraphics.enabled = !noteGraphics.enabled;
         }
     }
+
+
+    private void OnTriggerEnter(Collider player)
+    {
+        if (click)
+        {
+            Debug.Log("Clicked");
+            noteGraphics.enabled = true;
+        }
+        else if(noteGraphics.enabled && click)
+        {
+            noteGraphics.enabled = false;
+        }
+    }
+
+    
 }
