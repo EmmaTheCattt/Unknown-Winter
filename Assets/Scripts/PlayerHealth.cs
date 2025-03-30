@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
     public Color ZeroHealthColor = Color.black;
     private float CurrentHealth;
     private bool Dead;
+
+    private bool isInEnemyRange;
 
     private void OnEnable()
     {
@@ -51,10 +54,32 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy")) 
         {
+            isInEnemyRange = true;
+
+            StartCoroutine(takeDamage(other));
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            isInEnemyRange = false;
+
+            StopCoroutine(takeDamage(other));
+        }
+    }
+
+    IEnumerator takeDamage(Collider other)
+    {
+        WaitForSeconds wait = new WaitForSeconds(1f);
+        
+        while (isInEnemyRange == true)
+        {
+            yield return wait;
             CurrentHealth = CurrentHealth - 20;
             SetHealthUI();
             Debug.Log(CurrentHealth);
-
         }
     }
 }
