@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 1775841839}
   m_Layer: 3
   m_Name: Platform_testing
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,6 +397,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2036104864059358624, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036104864059358624, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036104864059358624, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535546109409562557, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535546109409562557, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5234054393738952094, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: m_Enabled
       value: 1
