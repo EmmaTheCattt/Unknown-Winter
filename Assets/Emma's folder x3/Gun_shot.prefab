@@ -19380,7 +19380,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4015694166799176000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -19432,7 +19432,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -19448,6 +19448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0fce1e07439c84789f00bce16ec7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RB: {fileID: 0}
+  Col: {fileID: 0}
 --- !u!54 &6083179627816139657
 Rigidbody:
   m_ObjectHideFlags: 0
