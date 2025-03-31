@@ -19555,7 +19555,7 @@ LensFlare:
   m_FadeSpeed: 3
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_Directional: 0
 --- !u!95 &6495776599910618267
 Animator:
