@@ -6,11 +6,15 @@ public class flarebullet : MonoBehaviour
 {
     public Rigidbody RB;
     public Collider Col;
+    public Animator Ani;
+
+    public bool landed = false;
     // Start is called before the first frame update
     void Start()
     {
         RB = GetComponent<Rigidbody>();
         Col = GetComponent<Collider>();
+        Ani = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,5 +41,8 @@ public class flarebullet : MonoBehaviour
         RB.velocity = new Vector3(0, 0, 0);
         RB.useGravity = false;
         Col.enabled = false;
+        landed = true;
+        Ani.SetBool("Ground", landed);
+
     }
 }
