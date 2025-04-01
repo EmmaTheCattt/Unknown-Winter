@@ -9,7 +9,7 @@ using static UnityEngine.GraphicsBuffer;
 public class InteractionScript : MonoBehaviour
 {
     public Image pickUpIcon;
-    
+    public bool inView = false;
     public GameObject player;
 
     void Start()
@@ -22,17 +22,17 @@ public class InteractionScript : MonoBehaviour
     {
         if (target.CompareTag("Interactable"))
         {
-            Debug.Log("Something");
+            
             pickUpIcon.enabled = true;
-
+            inView = true;
         }
-        else
-        {
-            pickUpIcon.enabled = false;
-
-        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        pickUpIcon.enabled = false;
+        inView = false;
     }
 
-    
 }
 

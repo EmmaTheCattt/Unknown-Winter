@@ -1,42 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEngine.GraphicsBuffer;
 
-
-public class NoteScript : InteractionScript
+public class noteScript : MonoBehaviour
 {
-    public Image noteGraphics;
-    private bool click;
+    public Image noteGraphic;
+    private bool onTrigger;
 
-    void Start()
+
+    private void Start()
     {
-        noteGraphics.enabled = false;
+        noteGraphic.enabled = false;
     }
+
 
     private void Update()
     {
-        bool click = Input.GetMouseButtonDown(1);
-        if (click)
+        if (Input.GetMouseButtonDown(1) && onTrigger)
         {
-            Debug.Log("Clicked");
+            Debug.Log("Interacted");
+            noteGraphic.enabled = !noteGraphic.enabled;
         }
+
+        if (noteGraphic.enabled && !onTrigger)
+        {
+            noteGraphic.enabled = false;
+        }
+        
     }
 
-
-    private void OnTriggerEnter(Collider player)
+    private void OnTriggerEnter(Collider other)
     {
-        if (click)
-        {
-            Debug.Log("Clicked");
-            noteGraphics.enabled = true;
-        }
-        else if(noteGraphics.enabled && click)
-        {
-            noteGraphics.enabled = false;
-        }
+        onTrigger = true;
+        
     }
 
-    
+    private void OnTriggerExit(Collider other)
+    {
+        onTrigger = false;
+    }
+
 }
