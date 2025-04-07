@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8800168733724318353}
   - component: {fileID: 146702138194761452}
   m_Layer: 0
-  m_Name: Interactable
+  m_Name: RedactedNote
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
