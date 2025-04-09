@@ -644,7 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8486671049898834718, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: Ground.m_Bits
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 1212724821}
   - component: {fileID: 1212724820}
   - component: {fileID: 1212724823}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Ground
   m_Icon: {fileID: 0}
