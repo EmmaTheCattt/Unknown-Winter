@@ -10,9 +10,12 @@ public class noteScript : MonoBehaviour
     public Image noteGraphic;
     private bool onTrigger;
     public GameObject noteText;
-    
+    public Image HandInteract;
 
-
+    private void Awake()
+    {
+        onTrigger = false;
+    }
     private void Start()
     {
         noteGraphic.enabled = false;
@@ -27,6 +30,7 @@ public class noteScript : MonoBehaviour
             Debug.Log("Interacted");
             noteGraphic.enabled = !noteGraphic.enabled;
             noteText.SetActive(true);
+            HandInteract.enabled = false;
         }
 
         if (noteGraphic.enabled && !onTrigger)
@@ -44,8 +48,7 @@ public class noteScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        onTrigger = true;
-        
+            onTrigger = true;
     }
 
     private void OnTriggerExit(Collider other)
