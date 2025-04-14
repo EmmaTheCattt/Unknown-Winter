@@ -8,7 +8,7 @@ using TMPro;
 public class noteScript : MonoBehaviour
 {
     public Image noteGraphic;
-    private bool onTrigger;
+    public bool onTrigger;
     public GameObject noteText;
     public Image HandInteract;
 
@@ -16,10 +16,12 @@ public class noteScript : MonoBehaviour
     {
         onTrigger = false;
     }
+
     private void Start()
     {
         noteGraphic.enabled = false;
         noteText.SetActive(false);
+        
     }
 
 
@@ -27,7 +29,7 @@ public class noteScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && onTrigger)
         {
-            Debug.Log("Interacted");
+
             noteGraphic.enabled = !noteGraphic.enabled;
             noteText.SetActive(true);
             HandInteract.enabled = false;
@@ -48,7 +50,15 @@ public class noteScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (CompareTag("Interactable"))
+        {
             onTrigger = true;
+            Debug.Log("triggered");
+        }
+        else
+        {
+            onTrigger = false;
+        }
     }
 
     private void OnTriggerExit(Collider other)
