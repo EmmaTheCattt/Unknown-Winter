@@ -6815,7 +6815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3850000d2a9033e4ca790e183e42308c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Level 1
+  Scene: instruction
   startbutton: {fileID: 1675337471}
   endbutton: {fileID: 1879481126}
 --- !u!4 &1879932585

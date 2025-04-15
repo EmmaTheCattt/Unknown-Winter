@@ -5,14 +5,16 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.EventSystems.EventTrigger;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float StartingHealth = 100f;
     public Slider slider;
     public Image FillImage;
-    
-    
+    public string Scene = "Level 1";
+
+
     public Color FullHealthColor = Color.red;
     public Color ZeroHealthColor = Color.black;
     private float CurrentHealth;
@@ -33,9 +35,10 @@ public class PlayerHealth : MonoBehaviour
     CurrentHealth -= damage;
         SetHealthUI();
        
-        if (CurrentHealth <= 0 && !Dead)
+        if (CurrentHealth <= 0f && !Dead)
         { 
         OnDeath();
+            Debug.Log("dying");
         }
     }
 
@@ -47,8 +50,9 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private void OnDeath() 
-    { 
-        Dead = true; 
+    {
+        SceneManager.LoadScene(Scene);
+        Debug.Log("Death");
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -77,9 +81,16 @@ public class PlayerHealth : MonoBehaviour
         while (isInEnemyRange == true)
         {
             yield return wait;
-            CurrentHealth = CurrentHealth - 20;
+            CurrentHealth = CurrentHealth - 20f;
             SetHealthUI();
             Debug.Log(CurrentHealth);
+
+            if (CurrentHealth <= 0f && !Dead)
+            {
+                OnDeath();
+                Debug.Log("dying");
+            }
+
         }
     }
 }
