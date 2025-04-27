@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 6be34009585b0284d86a2de0b3c71823
+guid: 3943b1893e7914143bb17ff78c397c51
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Straights & turn
+    second: {fileID: 2100000, guid: 125b2fe4c8aa9434ca92ef2481a058ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: openings
+    second: {fileID: 2100000, guid: 0d4f6eacb736e9f40a581b25952ac320, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rooms & corridoors
+    second: {fileID: 2100000, guid: 75cce303ba7aa4f4ba0971b536fe5c19, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
