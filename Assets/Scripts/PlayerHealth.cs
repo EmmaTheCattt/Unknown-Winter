@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public Slider slider;
     public Image FillImage;
     public string Scene = "Level 1";
-
+    public string NextScene = "End";
 
     public Color FullHealthColor = Color.red;
     public Color ZeroHealthColor = Color.black;
@@ -56,11 +56,16 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy")) 
+        if (other.gameObject.CompareTag("Enemy"))
         {
             isInEnemyRange = true;
 
             StartCoroutine(takeDamage(other));
+        }
+
+        if (other.gameObject.CompareTag("Door"))
+        {
+            SceneManager.LoadScene(NextScene);
         }
     }
 

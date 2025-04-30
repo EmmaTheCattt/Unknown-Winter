@@ -12,6 +12,7 @@ TagManager:
   - Interactable
   - Ground
   - Bullet
+  - Door
   layers:
   - Default
   - TransparentFX
