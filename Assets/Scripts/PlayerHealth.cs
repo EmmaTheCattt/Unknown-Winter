@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
     private bool Dead;
 
     private bool isInEnemyRange;
+    public bool KeyCollected;
 
     private void OnEnable()
     {
@@ -28,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         CurrentHealth = StartingHealth;
         Dead = false;
         SetHealthUI();
-        
+        KeyCollected = false;
     }
     public void TakeDamage(float damage) 
     {
@@ -62,8 +63,17 @@ public class PlayerHealth : MonoBehaviour
 
             StartCoroutine(takeDamage(other));
         }
+        else if (other.gameObject.CompareTag("Corpse")) 
+        {
+        KeyCollected = true;
+            Debug.Log("key Collected");
+        }
 
-        if (other.gameObject.CompareTag("Door"))
+        else if (other.gameObject.CompareTag("Door")&& KeyCollected==true)
+        {
+            SceneManager.LoadScene(NextScene);
+        }
+        else if (other.gameObject.CompareTag("Door2"))
         {
             SceneManager.LoadScene(NextScene);
         }

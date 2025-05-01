@@ -14,12 +14,18 @@ public class Startmenuscript : MonoBehaviour
     public void Start()
     {
         startbutton.onClick.AddListener(Startbutton);
+
+        if(endbutton != null)
+        {
         endbutton.onClick.AddListener(Quit);
+
+        }
         
     }
 
     public void Startbutton()
     {
+        Debug.Log("button has been pressed");
         SceneManager.LoadScene(Scene);
         
         
