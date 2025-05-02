@@ -474,6 +474,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8486671049898834718, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: WalkSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486671049898834718, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: SprintSpeed
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486671049898834718, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: Ground.m_Bits
       value: 8
       objectReference: {fileID: 0}

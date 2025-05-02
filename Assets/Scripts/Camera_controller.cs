@@ -60,7 +60,8 @@ public class Camera_controller : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.rotation = Quaternion.Euler(xRotation + aniX, yRotation + aniY, aniZ);
-        Orientation.rotation = Quaternion.Euler(0, yRotation + aniY, aniY);
+        Orientation.rotation = Quaternion.Euler(0, yRotation + aniY, 0);
+        //Orientation.rotation = Quaternion.Euler(0, yRotation + aniY, aniY);
 
         transform.position = new Vector3(aniX_pos, aniY_pos, aniZ_pos);
     }
