@@ -28310,6 +28310,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8486671049898834718, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: Flying_speed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
