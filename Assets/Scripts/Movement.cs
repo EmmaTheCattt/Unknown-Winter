@@ -174,5 +174,11 @@ public class Movement : MonoBehaviour
             Vector3 limitedvel = flatVel.normalized * Flying_speed;
             rb.velocity = new Vector3(limitedvel.x, rb.velocity.y, limitedvel.z);
         }
+
+        if (flatVel.magnitude > SprintSpeed && grounded == true)
+        {
+            Vector3 limitedvel = flatVel.normalized * SprintSpeed;
+            rb.velocity = new Vector3(limitedvel.x, rb.velocity.y, limitedvel.z);
+        }
     }
 }
