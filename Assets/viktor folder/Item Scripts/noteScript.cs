@@ -50,20 +50,23 @@ public class noteScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Interactable"))
+        if (other.CompareTag("Interactable"))
         {
             onTrigger = true;
             Debug.Log("triggered");
         }
         else
         {
-            onTrigger = false;
+            //onTrigger = false;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        onTrigger = false;
+        if (other.CompareTag("Interactable"))
+        {
+            onTrigger = false;
+        }
     }
 
 }
