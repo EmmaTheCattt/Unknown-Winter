@@ -19337,6 +19337,7 @@ GameObject:
   - component: {fileID: 8680081308209261249}
   - component: {fileID: 4400256332671268529}
   - component: {fileID: 6495776599910618267}
+  - component: {fileID: 6916519463825876250}
   m_Layer: 6
   m_Name: Gun_shot
   m_TagString: Bullet
@@ -19580,6 +19581,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!208 &6916519463825876250
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015694166799176000}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 25, y: 0.5, z: 25}
+  m_MoveThreshold: 0
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.25
 --- !u!1 &4462293393909230468
 GameObject:
   m_ObjectHideFlags: 0
