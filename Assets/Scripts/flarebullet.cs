@@ -9,6 +9,8 @@ public class flarebullet : MonoBehaviour
     public Animator Ani;
 
     public bool landed = false;
+    public float Destroy_time = 15;
+    public float time = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,12 @@ public class flarebullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        time += Time.deltaTime;
+
+        if (time > Destroy_time)
+        {
+            Destroy_bullet();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,7 +40,10 @@ public class flarebullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        BulletLand();
+        if (collision.collider.CompareTag("Ground"))
+        {
+            BulletLand();
+        }
     }
 
     private void BulletLand()
@@ -44,5 +54,9 @@ public class flarebullet : MonoBehaviour
         landed = true;
         Ani.SetBool("Ground", landed);
 
+    }
+    private void Destroy_bullet()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 }

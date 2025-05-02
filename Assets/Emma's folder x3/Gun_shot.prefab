@@ -19428,7 +19428,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -19452,6 +19452,8 @@ MonoBehaviour:
   Col: {fileID: 0}
   Ani: {fileID: 0}
   landed: 0
+  Destroy_time: 15
+  time: 0
 --- !u!54 &6083179627816139657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19555,7 +19557,7 @@ LensFlare:
   m_FadeSpeed: 3
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 448
   m_Directional: 0
 --- !u!95 &6495776599910618267
 Animator:
