@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
     public float height;
     public LayerMask Ground;
     public bool grounded;
+    public float Flying_speed = 10f;
 
 
     [Header("Other")]
@@ -76,6 +77,7 @@ public class Movement : MonoBehaviour
 
         MyInput();
         animationReset();
+        SpeedControl();
     }
 
     private void animationReset()
@@ -161,5 +163,16 @@ public class Movement : MonoBehaviour
         Animation_check();
         Invoke("CancelInvoke", Leg_push_time);
 
+    }
+
+    private void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+
+        if (flatVel.magnitude > Flying_speed && grounded == false)
+        {
+            Vector3 limitedvel = flatVel.normalized * Flying_speed;
+            rb.velocity = new Vector3(limitedvel.x, rb.velocity.y, limitedvel.z);
+        }
     }
 }
