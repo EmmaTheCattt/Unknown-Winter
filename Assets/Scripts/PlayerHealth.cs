@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     public Image FillImage;
     public string Scene = "Level 1";
     public string NextScene = "End";
+    public GameObject KeyText;
+    public GameObject NoKeyText;
 
     public Color FullHealthColor = Color.red;
     public Color ZeroHealthColor = Color.black;
@@ -30,6 +32,8 @@ public class PlayerHealth : MonoBehaviour
         Dead = false;
         SetHealthUI();
         KeyCollected = false;
+        KeyText.SetActive(false);
+        NoKeyText.SetActive(false);
     }
     public void TakeDamage(float damage) 
     {
@@ -66,6 +70,7 @@ public class PlayerHealth : MonoBehaviour
         else if (other.gameObject.CompareTag("Corpse")) 
         {
         KeyCollected = true;
+            KeyText.SetActive(true);
             Debug.Log("key Collected");
         }
 
@@ -73,6 +78,12 @@ public class PlayerHealth : MonoBehaviour
         {
             SceneManager.LoadScene(NextScene);
         }
+        else if (other.gameObject.CompareTag("Door") && KeyCollected == false)
+        {
+            NoKeyText.SetActive(true);
+          
+        }
+
         else if (other.gameObject.CompareTag("Door2"))
         {
             SceneManager.LoadScene(NextScene);
@@ -87,6 +98,21 @@ public class PlayerHealth : MonoBehaviour
 
             StopCoroutine(takeDamage(other));
         }
+        else if (other.gameObject.CompareTag("Corpse"))
+        {
+            
+            KeyText.SetActive(false);
+            
+        }
+
+        
+        else if (other.gameObject.CompareTag("Door") && KeyCollected == false)
+        {
+            NoKeyText.SetActive(false);
+
+        }
+
+       
     }
 
     IEnumerator takeDamage(Collider other)

@@ -13,18 +13,21 @@ public class Startmenuscript : MonoBehaviour
 
     public void Start()
     {
-        startbutton.onClick.AddListener(Startbutton);
+        /*startbutton.onClick.AddListener(Startbutton);
 
         if(endbutton != null)
         {
         endbutton.onClick.AddListener(Quit);
 
-        }
+        }*/
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
     }
 
     public void Startbutton()
     {
+
         Debug.Log("button has been pressed");
         SceneManager.LoadScene(Scene);
         
@@ -37,8 +40,5 @@ public class Startmenuscript : MonoBehaviour
         Application.Quit();
     }
 
-    void Update()
-    {
-
-    }
+    
 }
