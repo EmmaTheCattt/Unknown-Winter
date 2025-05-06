@@ -13,10 +13,12 @@ public class basegunscript : MonoBehaviour
     private void Start()
     {
         time = interval;
+        bulletSpawnPoint = GameObject.FindGameObjectWithTag("PlayerCam").transform;
     }
 
     void Update()
     {
+        bulletSpawnPoint = GameObject.FindGameObjectWithTag("PlayerCam").transform;
         time += Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.Mouse0) && time >= interval)
         {

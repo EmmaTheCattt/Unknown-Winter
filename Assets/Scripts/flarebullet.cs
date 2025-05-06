@@ -57,6 +57,6 @@ public class flarebullet : MonoBehaviour
     }
     private void Destroy_bullet()
     {
-        GameObject.Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

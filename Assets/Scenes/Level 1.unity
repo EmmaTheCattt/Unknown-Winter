@@ -2015,6 +2015,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8098705762771690712, guid: 9fde7228d65dd954ba027961cf433520, type: 3}
   m_PrefabInstance: {fileID: 240786054}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &247918950 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 43475301727348936, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+  m_PrefabInstance: {fileID: 810596171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &248439864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31781,6 +31786,14 @@ PrefabInstance:
       propertyPath: time
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5125108449780671953, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4015694166799176000, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+    - target: {fileID: 5125108449780671953, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 247918950}
     - target: {fileID: 6210088863669007347, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: m_Name
       value: Player prefab
@@ -101000,6 +101013,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1208680144940971377, guid: 2fc435fd8c43f884b9ddafa43caa5e24, type: 3}
   m_PrefabInstance: {fileID: 1122067597}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2131128608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -389.02655
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 228.51334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685432166094970932, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015694166799176000, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
+      propertyPath: m_Name
+      value: Gun_shot
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8aecacb655b2c1b4282fdb6b3812a702, type: 3}
 --- !u!4 &128129308119472044
 Transform:
   m_ObjectHideFlags: 0
@@ -104409,3 +104479,4 @@ SceneRoots:
   - {fileID: 1813298853}
   - {fileID: 522046773}
   - {fileID: 443692408}
+  - {fileID: 2131128608}
