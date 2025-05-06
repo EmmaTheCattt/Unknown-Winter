@@ -8,7 +8,7 @@ public class basegunscript : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
     public float interval = 2;
-    public float time = 0;
+    public float time = 2;
 
     private void Start()
     {
