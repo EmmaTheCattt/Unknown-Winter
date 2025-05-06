@@ -15,6 +15,7 @@ TagManager:
   - Door
   - Corpse
   - Door2
+  - Zone
   layers:
   - Default
   - TransparentFX
