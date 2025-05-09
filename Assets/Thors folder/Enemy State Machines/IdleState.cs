@@ -17,12 +17,12 @@ public class IdleState : IState
 
     public void Enter()
     {
-        Debug.Log("Enter Idle State");
+        
     }
 
     public void Execute()
     {
-        Debug.Log("Im Idling");
+        
 
         if (brain.playerSpottet == true)
         {
@@ -32,6 +32,6 @@ public class IdleState : IState
 
     public void Exit()
     {
-        Debug.Log("Exit Idle State");
+        
     }
 }

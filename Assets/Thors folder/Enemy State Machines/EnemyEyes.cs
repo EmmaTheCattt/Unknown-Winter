@@ -17,7 +17,7 @@ public class EnemyEyes
         {
             yield return wait;
             CanSeePlayer(player, enemy, detectionRange);
-            Debug.Log("COROUTINE");
+            
         }
     }
 
@@ -30,11 +30,11 @@ public class EnemyEyes
         if (Vector3.Distance(enemy.transform.position, player.transform.position) < detectionRange)
         {
             playerInRange = true;
-            Debug.Log("PLAYER IN RANGE!!!!");
+            
         }
         else
         {
-            Debug.Log("PLAYER NOT! IN RANGE!!!");
+            
         }
 
         RaycastHit hit;
@@ -43,17 +43,17 @@ public class EnemyEyes
             if (hit.transform == player.transform)
             {
                 playerNotHidden = true;
-                Debug.Log("PLAYER NOT HIDDEN!!!!");
+                
             }
         }
         else
         {
-            Debug.Log("PLAYER HIDDEN!!!!!");
+            
         }
         if ((playerInRange && playerNotHidden) == true)
         {
             playerSpottet = true;
-            Debug.Log("PLAYER SPOTTET");
+            
         }
 
         return playerSpottet;

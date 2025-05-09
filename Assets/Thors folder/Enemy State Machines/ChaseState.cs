@@ -14,12 +14,12 @@ public class ChaseState : IState
 
     public void Enter()
     {
-        Debug.Log("Enter Chase State");
+        
     }
 
     public void Execute()
     {
-        Debug.Log("I´m Chasing");
+        
         brain.agent.SetDestination(brain.playerTransform.position);
         if (brain.playerSpottet == false)
         {
@@ -29,6 +29,6 @@ public class ChaseState : IState
 
     public void Exit()
     {
-        Debug.Log("Exit Chase State");
+        
     }
 }

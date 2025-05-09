@@ -67,6 +67,15 @@ public class PlayerHealth : MonoBehaviour
 
             StartCoroutine(takeDamage(other));
         }
+
+        else if (other.gameObject.CompareTag("WeepingTypeShyt"))
+        {
+            Debug.Log("Weep colish");
+            CurrentHealth = 0f;
+            SetHealthUI();
+            OnDeath();
+        }
+
         else if (other.gameObject.CompareTag("Corpse")) 
         {
         KeyCollected = true;
@@ -100,17 +109,18 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Corpse"))
         {
-            
+
             KeyText.SetActive(false);
-            
+
         }
 
-        
+
         else if (other.gameObject.CompareTag("Door") && KeyCollected == false)
         {
             NoKeyText.SetActive(false);
 
         }
+
 
        
     }
