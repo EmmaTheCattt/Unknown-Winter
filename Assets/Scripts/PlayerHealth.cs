@@ -68,6 +68,7 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(takeDamage(other));
         }
 
+        //Viktor add neckity snap here!!!!!!!!!!!
         else if (other.gameObject.CompareTag("WeepingTypeShyt"))
         {
             Debug.Log("Weep colish");
