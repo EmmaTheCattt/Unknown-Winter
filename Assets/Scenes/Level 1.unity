@@ -31975,9 +31975,33 @@ PrefabInstance:
       propertyPath: UI_bullets.Array.data[6]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5482032286818345714, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482032286818345714, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482032286818345714, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482032286818345714, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482032286818345714, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6210088863669007347, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: m_Name
       value: Player prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 7406724441900793050, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7958478878445340100, guid: c6112b6bfc2deeb4c8bc0645f118fc62, type: 3}
       propertyPath: m_LocalPosition.x
