@@ -16,6 +16,7 @@ TagManager:
   - Corpse
   - Door2
   - Zone
+  - WeepingTypeShyt
   layers:
   - Default
   - TransparentFX

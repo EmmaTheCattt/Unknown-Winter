@@ -79,12 +79,12 @@ public class PlayerHealth : MonoBehaviour
 
         else if (other.gameObject.CompareTag("Corpse")) 
         {
-        KeyCollected = true;
+            KeyCollected = true;
             KeyText.SetActive(true);
             Debug.Log("key Collected");
         }
 
-        else if (other.gameObject.CompareTag("Door")&& KeyCollected==true)
+        else if (other.gameObject.CompareTag("Door") && KeyCollected==true)   
         {
             SceneManager.LoadScene(NextScene);
         }
