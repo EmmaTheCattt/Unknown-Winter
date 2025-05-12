@@ -55,5 +55,7 @@ public class basegunscript : MonoBehaviour
             flarebullet.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + 0.5f, Player.transform.position.z);
             flarebullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
         }
+
+        Update_Bullet_count(0);
     }
 }
