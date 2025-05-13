@@ -8,6 +8,7 @@ public class Bullet_pickup : MonoBehaviour, IInteractNew
 {
 
     public basegunscript gun;
+    public AudioSource pickUpSound;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,9 @@ public class Bullet_pickup : MonoBehaviour, IInteractNew
 
     public void OnInteract()
     {
+        pickUpSound.Play();
         gun.Bullet_Amount = gun.Ammo_Amount_max;
         Destroy(gameObject);
+
     }
 }

@@ -20,6 +20,7 @@ public class basegunscript : MonoBehaviour
 
     public int Ammo_Amount_max = 6;
     public int Bullet_Amount = 6;
+    public AudioSource flareSound;
 
     private void Start()
     {
@@ -54,6 +55,7 @@ public class basegunscript : MonoBehaviour
             var flarebullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             flarebullet.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + 0.5f, Player.transform.position.z);
             flarebullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+            flareSound.Play();
         }
 
         Update_Bullet_count(0);

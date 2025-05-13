@@ -25,6 +25,8 @@ public class PlayerHealth : MonoBehaviour
     private bool isInEnemyRange;
     public bool KeyCollected;
 
+    public AudioSource neckCrack;
+
     private void OnEnable()
     {
         
@@ -75,6 +77,7 @@ public class PlayerHealth : MonoBehaviour
             CurrentHealth = 0f;
             SetHealthUI();
             OnDeath();
+            neckCrack.Play();
         }
 
         else if (other.gameObject.CompareTag("Corpse")) 

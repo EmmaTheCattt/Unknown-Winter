@@ -10,6 +10,8 @@ public class InteractNew : MonoBehaviour
     Ray ray = new();
     public Image HandInteract;
     public Camera Camera;
+    
+
 
     public void Awake()
     {
@@ -28,24 +30,25 @@ public class InteractNew : MonoBehaviour
         float length = (ray.direction - ray.origin).magnitude;
         Debug.Log(length);
 
-        if (Physics.Raycast(ray, out var hit) && Input.GetMouseButtonDown(1))
+        if (Physics.Raycast(ray, out var hit) && Input.GetMouseButtonDown(1) && Physics.Raycast(ray, out hit, 2))
         {
             // When LMouse is clicked - this runs
             
             var interactable = hit.collider.gameObject.GetComponent<IInteractNew>();
-
+            
             if (interactable != null)
             {
                 // Interactable is found and script is run
                 interactable.OnInteract();
                 HandInteract.enabled = false;
+                
             }
             else
             {
                 Debug.Log("Interactable Not Found");
             }
         }
-        else if (Physics.Raycast(ray, out hit) && !Input.GetMouseButtonDown(1))
+        else if (Physics.Raycast(ray, out hit) && !Input.GetMouseButtonDown(1) && Physics.Raycast(ray, out hit, 2))
         {
             var interactable = hit.collider.gameObject.GetComponent<IInteractNew>();
 

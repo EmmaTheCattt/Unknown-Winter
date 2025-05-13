@@ -46,6 +46,8 @@ public class Movement : MonoBehaviour
 
     public float horizontalInput;
     public float verticalInput;
+    public AudioSource walkSound;
+
 
     Vector3 moveDirection;
     Vector3 Vel;
@@ -64,17 +66,19 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         grounded = Physics.Raycast(transform.position, Vector3.down, height * 0.5f, Ground);
 
         if (grounded)
         {
             rb.drag = GroundDrag;
+            
         }
         else
         {
             rb.drag = 0;
         }
-
+        
         MyInput();
         animationReset();
         SpeedControl();
@@ -96,6 +100,7 @@ public class Movement : MonoBehaviour
         {
             walking = true;
             //Debug.Log(rb.velocity);
+            
         }
         else
         {
@@ -143,6 +148,7 @@ public class Movement : MonoBehaviour
 
     void MovePlayer()
     {
+        walkSound.Play();
         moveDirection = Orientation.forward * verticalInput + Orientation.right * horizontalInput;
         //Brokenleg(leg_broken);
 
