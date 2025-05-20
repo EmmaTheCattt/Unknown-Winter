@@ -16,6 +16,7 @@ public class WeepingBrain : MonoBehaviour
     CanSeeEnemy canSeeEnemy = new CanSeeEnemy();
 
     public bool canSeeMe;
+    public bool isInCamera = false;
 
     private void Awake()
     {
@@ -24,6 +25,8 @@ public class WeepingBrain : MonoBehaviour
 
     public void Start()
     {
+        //Player = GameObject.FindGameObjectWithTag("Player");
+        //playerCamera = Player.GetComponent<Camera>();
         weepingStateMachine.StartState(weepingStateMachine.startState);
     }
 
@@ -31,6 +34,7 @@ public class WeepingBrain : MonoBehaviour
     {
         if (canSeeEnemy.isInCamera(playerCamera, target))
         {
+            isInCamera = true;
             canSeeMe = canSeeEnemy.isVisible(Player, target);
         }
         else

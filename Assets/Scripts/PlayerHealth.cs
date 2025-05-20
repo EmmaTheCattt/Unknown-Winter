@@ -71,13 +71,14 @@ public class PlayerHealth : MonoBehaviour
         }
 
         //Viktor add neckity snap here!!!!!!!!!!!
-        else if (other.gameObject.CompareTag("WeepingTypeShyt"))
+        else if (other.gameObject.CompareTag("WEEP"))
         {
+            /*neckCrack.Play();
             Debug.Log("Weep colish");
             CurrentHealth = 0f;
             SetHealthUI();
-            OnDeath();
-            neckCrack.Play();
+            OnDeath();*/
+            StartCoroutine(CrackYaNeck(other));
         }
 
         else if (other.gameObject.CompareTag("Corpse")) 
@@ -147,5 +148,17 @@ public class PlayerHealth : MonoBehaviour
             }
 
         }
+    }
+
+    IEnumerator CrackYaNeck(Collider other)
+    {
+        WaitForSeconds wait = new WaitForSeconds(1f);
+
+        neckCrack.Play();
+        yield return wait;
+        Debug.Log("Weep colish");
+        CurrentHealth = 0f;
+        SetHealthUI();
+        OnDeath();
     }
 }

@@ -28,7 +28,7 @@ public class InteractNew : MonoBehaviour
         ray = Camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 
         float length = (ray.direction - ray.origin).magnitude;
-        Debug.Log(length);
+        
 
         if (Physics.Raycast(ray, out var hit) && Input.GetMouseButtonDown(1) && Physics.Raycast(ray, out hit, 2))
         {

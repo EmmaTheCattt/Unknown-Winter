@@ -17,6 +17,7 @@ TagManager:
   - Door2
   - Zone
   - WeepingTypeShyt
+  - WEEP
   layers:
   - Default
   - TransparentFX

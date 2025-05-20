@@ -148,7 +148,7 @@ public class Movement : MonoBehaviour
 
     void MovePlayer()
     {
-        walkSound.Play();
+        
         moveDirection = Orientation.forward * verticalInput + Orientation.right * horizontalInput;
         //Brokenleg(leg_broken);
 

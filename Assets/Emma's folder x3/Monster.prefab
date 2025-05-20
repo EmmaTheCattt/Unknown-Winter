@@ -181,9 +181,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 09e09373b1a0da944ae4ce3f52bd769b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c54fa4cbeb3e13646a4c8b0a70c0ad9b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.852
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerTransform: {fileID: 0}
   enemy: {fileID: 4590446410625597958}
-  detectionRange: 20
+  detectionRange: 10
   playerSpottet: 0
   agent: {fileID: 3728351348103716261}
   Chasemusic: {fileID: -617941806878907283}
@@ -296,7 +296,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
