@@ -3,7 +3,17 @@ guid: 88d43fd905fa1ff498d53878cecd4a2a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bed
+    second: {fileID: 2100000, guid: f82c8621925b794498fcb7b805a3c83f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rust
+    second: {fileID: 2100000, guid: c648eb1121750b0499d2083fc5e856a3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
