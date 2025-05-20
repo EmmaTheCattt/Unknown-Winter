@@ -17,17 +17,22 @@ public class IdleState : IState
 
     public void Enter()
     {
-        
+        brain.ChaseOver();
     }
 
     public void Execute()
     {
-        
+
 
         if (brain.playerSpottet == true)
         {
             brain.EnemyStateMachine.ChangeState(brain.EnemyStateMachine.chaseState);
         }
+        else
+        {
+            brain.agent.isStopped = true;
+        }
+        //brain.ChaseOver();
     }
 
     public void Exit()
