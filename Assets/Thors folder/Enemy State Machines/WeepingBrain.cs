@@ -12,6 +12,7 @@ public class WeepingBrain : MonoBehaviour
     public GameObject Player;
     [SerializeField] private Camera playerCamera;
     public NavMeshAgent agent;
+    private GameObject Cameraholder;
 
     CanSeeEnemy canSeeEnemy = new CanSeeEnemy();
 
@@ -21,6 +22,10 @@ public class WeepingBrain : MonoBehaviour
     private void Awake()
     {
         weepingStateMachine = new WeepingStateMachine(this);
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Cameraholder = GameObject.FindGameObjectWithTag("PlayerCam");
+        playerCamera = Cameraholder.GetComponent<Camera>();
+        
     }
 
     public void Start()
@@ -36,6 +41,7 @@ public class WeepingBrain : MonoBehaviour
         {
             isInCamera = true;
             canSeeMe = canSeeEnemy.isVisible(Player, target);
+
         }
         else
         {

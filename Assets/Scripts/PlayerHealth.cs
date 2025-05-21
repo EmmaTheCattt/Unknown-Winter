@@ -159,6 +159,6 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Weep colish");
         CurrentHealth = 0f;
         SetHealthUI();
-        OnDeath();
+        SceneManager.LoadScene(NextScene);
     }
 }
